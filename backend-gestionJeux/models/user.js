@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true, minlength: 6 },
   role: { type: String, required: true },
-  tasks: [
+  jeux: [
     {
       type: mongoose.Types.ObjectId,
       required: true,
