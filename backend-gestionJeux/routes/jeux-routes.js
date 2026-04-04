@@ -1,19 +1,22 @@
 import express from "express";
 import jeuxController from "../controllers/jeux-controller.js";
+import { check } from "express-validator";
 import checkAuth from "../middleware/check-auth.js";
 
 const router = express.Router();
 
 router.get("/getAllGames", jeuxController.getAllJeux);
 
-router.get("/getGameById", jeuxController.getJeuById);
+router.get("/getGamesById/:uid", jeuxController.getJeuxById);
 
-router.use(checkAuth);
+router.post(
+  "/addGame",
+  [checkAuth, check("titre").not().isEmpty()],
+  jeuxController.addJeu,
+);
 
-router.post("/addGame", jeuxController.addJeu);
+router.patch("/updateGame", [checkAuth], jeuxController.updateJeu);
 
-router.patch("/updateGame", jeuxController.updateJeu);
-
-router.delete("/deleteGame", jeuxController.deleteJeu);
+router.delete("/deleteGame", [checkAuth], jeuxController.deleteJeu);
 
 export default router;

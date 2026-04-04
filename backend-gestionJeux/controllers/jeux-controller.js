@@ -9,7 +9,25 @@ const getAllJeux = async (req, res, next) => {
   res.json({ jeux: jeux });
 };
 
-const getJeuById = async (req, res, next) => {};
+const getJeuxById = async (req, res, next) => {
+  const userId = req.params.uid;
+
+  let jeuxForUser;
+  try {
+    jeuxForUser = await Jeu.find({ assignee: userId });
+  } catch (e) {
+    const erreur = new HttpError("Une erreur BD est survenue", 500);
+    return next(err);
+  }
+
+  if (!jeuxForUser || jeuxForUser.length === 0) {
+    return next(new HttpError("Aucun jeu trouvée pour cet utilisateur", 404));
+  }
+
+  res.json({
+    jeux: jeuxForUser.map((jeu) => jeu.toObject({ getters: true })),
+  });
+};
 
 const addJeu = async (req, res, next) => {
   const validationErrors = validationResult(req);
@@ -59,7 +77,7 @@ const deleteJeu = async (req, res, next) => {};
 
 export default {
   getAllJeux,
-  getJeuById,
+  getJeuxById,
   addJeu,
   updateJeu,
   deleteJeu,
