@@ -4,7 +4,10 @@ import HttpError from "../utils/http-error.js";
 import { validationResult } from "express-validator";
 import mongoose from "mongoose";
 
-const getAllJeux = async (req, res, next) => {};
+const getAllJeux = async (req, res, next) => {
+  const jeux = await Jeu.find().exec();
+  res.json({ jeux: jeux });
+};
 
 const getJeuById = async (req, res, next) => {};
 
