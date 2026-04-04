@@ -40,7 +40,7 @@ const addJeu = async (req, res, next) => {
   }
   try {
     await createdJeu.save();
-    user.tasks.push(createdJeu);
+    user.jeux.push(createdJeu);
     await user.save();
   } catch (e) {
     const err = new HttpError("Création dans la BD échouée.", 500);

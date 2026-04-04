@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     {
       type: mongoose.Types.ObjectId,
       required: true,
-      ref: "Task",
+      ref: "Jeu",
     },
   ],
 });
