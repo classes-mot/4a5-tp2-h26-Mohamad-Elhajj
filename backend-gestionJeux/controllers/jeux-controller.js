@@ -71,7 +71,25 @@ const addJeu = async (req, res, next) => {
   res.status(201).json({ jeu: createdJeu });
 };
 
-const updateJeu = async (req, res, next) => {};
+const updateJeu = async (req, res, next) => {
+  const jeuId = req.params.jid;
+  const jeuUpdates = req.body;
+
+  try {
+    const jeu = await Jeu.findByIdAndUpdate(jeuId, jeuUpdates, {
+      new: true,
+    }).populate("assignee");
+
+    if (!jeu) {
+      return res.status(404).json({ message: "Jeu non trouvé" });
+    }
+
+    res.status(200).json({ jeu: jeu.toObject({ getters: true }) });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ message: "Erreur lors de la mis à jour du jeu." });
+  }
+};
 
 const deleteJeu = async (req, res, next) => {
   const jeuId = req.params.jid;
@@ -88,9 +106,7 @@ const deleteJeu = async (req, res, next) => {
     res.status(200).json({ message: "Jeu supprimé." });
   } catch (e) {
     console.error(e);
-    res
-      .status(500)
-      .json({ message: "Erreur lors de la suppression de la tâche." });
+    res.status(500).json({ message: "Erreur lors de la suppression du jeu." });
   }
 };
 

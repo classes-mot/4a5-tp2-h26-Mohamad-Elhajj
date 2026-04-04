@@ -1,0 +1,255 @@
+{
+  "info": {
+    "_postman_id": "49760cc7-8333-46f9-9f7d-a5c1f22e83f6",
+    "name": "TP2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52765514",
+    "_collection_link": "https://go.postman.co/collection/52765514-49760cc7-8333-46f9-9f7d-a5c1f22e83f6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/api/jeux",
+      "item": [
+        {
+          "name": "Get All Jeux",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/jeux/getAllGames",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "getAllGames"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Jeu (ID)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/jeux/getGamesById/69d0291c11d544a2d3edb1be",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "getGamesById",
+                "69d0291c11d544a2d3edb1be"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjYyMzIyLCJleHAiOjE3NzUyNjU5MjJ9.MWS6MgqasyTUPAABZdB5DlERNXh6zQ1BgfkQJCVHpdM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titre\":\"UNO\",\r\n    \"categorie\":\"Famille\",\r\n    \"duree\":10,\r\n    \"nbrJoueur\":\"2-8\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux/addGame",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "addGame"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "MAJ Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjY2OTY3LCJleHAiOjE3NzUyNzA1Njd9.l3TLkP8_lJTaFcf5JvVbYI7xIApsk3g4VE_3B8P4-3c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"categorie\": \"Stratégie\",\r\n    \"duree\": 20\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux/updateGame/69d058233cec971c7839c517",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "updateGame",
+                "69d058233cec971c7839c517"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjY1MzU5LCJleHAiOjE3NzUyNjg5NTl9.CHzwdOfO7j2y2BMjDDOuUwtTo8qtIMRsduEc5g76xN0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/jeux/deleteGame/69d05a857ad566d4f4b1f1fc",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "deleteGame",
+                "69d05a857ad566d4f4b1f1fc"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/api/users",
+      "item": [
+        {
+          "name": "Inscription (USER)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Mohamad El-Hajj\",\r\n  \"email\": \"momo@gmail.com\",\r\n  \"password\": \"password\",\r\n  \"role\": \"admin\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Connexion (USER)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"momo@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
