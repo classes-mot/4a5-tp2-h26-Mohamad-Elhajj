@@ -73,7 +73,26 @@ const addJeu = async (req, res, next) => {
 
 const updateJeu = async (req, res, next) => {};
 
-const deleteJeu = async (req, res, next) => {};
+const deleteJeu = async (req, res, next) => {
+  const jeuId = req.params.jid;
+
+  try {
+    const jeu = await Jeu.findById(jeuId).populate("assignee");
+    if (!jeu) {
+      return res.status(404).json({ message: "Jeu non trouvé" });
+    }
+    await jeu.deleteOne();
+    jeu.assignee.jeux.pull(jeu._id);
+    await jeu.assignee.save();
+
+    res.status(200).json({ message: "Jeu supprimé." });
+  } catch (e) {
+    console.error(e);
+    res
+      .status(500)
+      .json({ message: "Erreur lors de la suppression de la tâche." });
+  }
+};
 
 export default {
   getAllJeux,

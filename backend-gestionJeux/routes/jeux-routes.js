@@ -15,8 +15,8 @@ router.post(
   jeuxController.addJeu,
 );
 
-router.patch("/updateGame", [checkAuth], jeuxController.updateJeu);
+router.patch("/updateGame/:jid", [checkAuth], jeuxController.updateJeu);
 
-router.delete("/deleteGame", [checkAuth], jeuxController.deleteJeu);
+router.delete("/deleteGame/:jid", [checkAuth], jeuxController.deleteJeu);
 
 export default router;
