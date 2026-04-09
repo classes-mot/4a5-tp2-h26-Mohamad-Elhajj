@@ -10,22 +10,23 @@ const getAllJeux = async (req, res, next) => {
 };
 
 const getJeuxById = async (req, res, next) => {
-  const userId = req.params.uid;
+  const jeuId = req.params.jid;
 
-  let jeuxForUser;
+  let jeu;
   try {
-    jeuxForUser = await Jeu.find({ assignee: userId });
+    jeu = await Jeu.findById(jeuId);
   } catch (e) {
+    console.log(e);
     const erreur = new HttpError("Une erreur BD est survenue", 500);
-    return next(err);
+    return next(erreur);
   }
 
-  if (!jeuxForUser || jeuxForUser.length === 0) {
-    return next(new HttpError("Aucun jeu trouvée pour cet utilisateur", 404));
+  if (!jeu) {
+    return next(new HttpError("Aucun jeu trouvé", 404));
   }
 
   res.json({
-    jeux: jeuxForUser.map((jeu) => jeu.toObject({ getters: true })),
+    jeu: jeu.toObject({ getters: true }),
   });
 };
 

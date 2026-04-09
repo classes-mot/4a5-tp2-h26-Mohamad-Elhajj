@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get("/getAllGames", jeuxController.getAllJeux);
 
-router.get("/getGamesById/:uid", jeuxController.getJeuxById);
+router.get("/getGamesById/:jid", jeuxController.getJeuxById);
 
 router.post(
   "/addGame",

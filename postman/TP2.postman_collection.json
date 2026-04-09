@@ -47,7 +47,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/api/jeux/getGamesById/69d0291c11d544a2d3edb1be",
+              "raw": "{{base_url}}/api/jeux/getGamesById/69d67fe1711f56985c34c7c2",
               "host": [
                 "{{base_url}}"
               ],
@@ -55,7 +55,7 @@
                 "api",
                 "jeux",
                 "getGamesById",
-                "69d0291c11d544a2d3edb1be"
+                "69d67fe1711f56985c34c7c2"
               ]
             }
           },
@@ -69,7 +69,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjYyMzIyLCJleHAiOjE3NzUyNjU5MjJ9.MWS6MgqasyTUPAABZdB5DlERNXh6zQ1BgfkQJCVHpdM",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNzU1ZmY5OTYxNDRkZmIxNjMzMzQiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1NjY1MDk0LCJleHAiOjE3NzU2Njg2OTR9.S5oqceAIhKyr6itlDZLOT9A5nJ7ZE5Df_qdL9CBdYI4",
                   "type": "string"
                 }
               ]
