@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "49760cc7-8333-46f9-9f7d-a5c1f22e83f6",
-    "name": "TP2",
+    "name": "TP2_MohamadElhajj",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "52765514",
     "_collection_link": "https://go.postman.co/collection/52765514-49760cc7-8333-46f9-9f7d-a5c1f22e83f6?source=collection_link"
@@ -47,7 +47,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/api/jeux/getGamesById/69d67fe1711f56985c34c7c2",
+              "raw": "{{base_url}}/api/jeux/getGamesById/69d8e5d33dfc5aa12a759f4f",
               "host": [
                 "{{base_url}}"
               ],
@@ -55,7 +55,7 @@
                 "api",
                 "jeux",
                 "getGamesById",
-                "69d67fe1711f56985c34c7c2"
+                "69d8e5d33dfc5aa12a759f4f"
               ]
             }
           },
@@ -69,7 +69,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNzU1ZmY5OTYxNDRkZmIxNjMzMzQiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1NjY1MDk0LCJleHAiOjE3NzU2Njg2OTR9.S5oqceAIhKyr6itlDZLOT9A5nJ7ZE5Df_qdL9CBdYI4",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNzU1ZmY5OTYxNDRkZmIxNjMzMzQiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1ODIyMjY1LCJleHAiOjE3NzU4MjU4NjV9.t3XpwXi1Mts3i59Ph_HKK8yoKtCcb2faFIkRiyMq5Qw",
                   "type": "string"
                 }
               ]
@@ -113,7 +113,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjY2OTY3LCJleHAiOjE3NzUyNzA1Njd9.l3TLkP8_lJTaFcf5JvVbYI7xIApsk3g4VE_3B8P4-3c",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNzU1ZmY5OTYxNDRkZmIxNjMzMzQiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1ODIyMjY1LCJleHAiOjE3NzU4MjU4NjV9.t3XpwXi1Mts3i59Ph_HKK8yoKtCcb2faFIkRiyMq5Qw",
                   "type": "string"
                 }
               ]
@@ -136,7 +136,7 @@
               }
             },
             "url": {
-              "raw": "{{base_url}}/api/jeux/updateGame/69d058233cec971c7839c517",
+              "raw": "{{base_url}}/api/jeux/updateGame/69d8e5d33dfc5aa12a759f4f",
               "host": [
                 "{{base_url}}"
               ],
@@ -144,7 +144,7 @@
                 "api",
                 "jeux",
                 "updateGame",
-                "69d058233cec971c7839c517"
+                "69d8e5d33dfc5aa12a759f4f"
               ]
             }
           },
@@ -158,7 +158,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQwMjkxYzExZDU0NGEyZDNlZGIxYmUiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1MjY1MzU5LCJleHAiOjE3NzUyNjg5NTl9.CHzwdOfO7j2y2BMjDDOuUwtTo8qtIMRsduEc5g76xN0",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWNlNzU1ZmY5OTYxNDRkZmIxNjMzMzQiLCJlbWFpbCI6Im1vbW9AZ21haWwuY29tIiwiaWF0IjoxNzc1ODIyMjY1LCJleHAiOjE3NzU4MjU4NjV9.t3XpwXi1Mts3i59Ph_HKK8yoKtCcb2faFIkRiyMq5Qw",
                   "type": "string"
                 }
               ]
@@ -172,7 +172,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/api/jeux/deleteGame/69d05a857ad566d4f4b1f1fc",
+              "raw": "{{base_url}}/api/jeux/deleteGame/69d8e5d33dfc5aa12a759f4f",
               "host": [
                 "{{base_url}}"
               ],
@@ -180,7 +180,7 @@
                 "api",
                 "jeux",
                 "deleteGame",
-                "69d05a857ad566d4f4b1f1fc"
+                "69d8e5d33dfc5aa12a759f4f"
               ]
             }
           },

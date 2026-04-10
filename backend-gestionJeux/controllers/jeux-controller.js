@@ -77,15 +77,17 @@ const updateJeu = async (req, res, next) => {
   const jeuUpdates = req.body;
 
   try {
-    const jeu = await Jeu.findByIdAndUpdate(jeuId, jeuUpdates, {
-      new: true,
-    }).populate("assignee");
+    const jeu = await Jeu.findById(jeuId);
 
     if (!jeu) {
       return res.status(404).json({ message: "Jeu non trouvé" });
     }
 
-    res.status(200).json({ jeu: jeu.toObject({ getters: true }) });
+    jeu.updateOne(jeuUpdates);
+
+    const updatedJeu = await Jeu.findById(jeuId).populate("assignee");
+
+    res.status(200).json({ jeu: updatedJeu.toObject({ getters: true }) });
   } catch (e) {
     console.error(e);
     res.status(500).json({ message: "Erreur lors de la mis à jour du jeu." });
